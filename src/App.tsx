@@ -9,6 +9,12 @@ function App() {
   const [followers, setFollowers] = useState<number|null>(null);
   const [posts, setPosts] = useState<number|null>(null);
 
+  const handleSubmit = () => {
+    if (name === "" || followers === null || posts === null) {
+      alert("please fill rest of the inputs");
+    }
+    setIsHome(false);
+  }
   if (!isHome) {
     return (
       <div className="min-h-screen flex items-center justify-center p-4">
@@ -56,7 +62,7 @@ function App() {
             placeholder="Enter Number of Posts..." 
             type="number"
           />
-          <Submit onClick={() => setIsHome(false)} />
+          <Submit onClick={handleSubmit} />
         </div>
 
       </div>
