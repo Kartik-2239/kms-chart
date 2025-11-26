@@ -51,6 +51,7 @@ function App() {
           />
           <InputBox 
             value={followers || ""}
+            min={0}
             onChange={(e) => setFollowers(Number(e.target.value))}
             label="Followers" 
             placeholder="Enter Number of Followers..." 
@@ -58,6 +59,7 @@ function App() {
           />
           <InputBox 
             value={posts || ""}
+            min={0}
             onChange={(e) => setPosts(Number(e.target.value))}
             label="Number of Posts" 
             placeholder="Enter Number of Posts..." 
