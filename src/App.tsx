@@ -12,6 +12,7 @@ function App() {
   const handleSubmit = () => {
     if (name === "" || followers === null || posts === null) {
       alert("please fill rest of the inputs");
+      return;
     }
     setIsHome(false);
   }

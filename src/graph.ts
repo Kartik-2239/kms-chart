@@ -7,10 +7,10 @@ export function createData(followers: number, posts: number): {name: string, kms
         const offset = 12
         data.push({name: '1', kms: MAX_KMS})
         for (let i = 1; i < TOTAL_YEARS-1; i++){
-            data.push({name: (i + 1).toString(), kms: (Math.random()*30 - i *offset)})
+            data.push({name: (i + 1).toString(), kms: (Math.random()*90 - i *offset)})
         }
     }
-    if (followers/posts < 0.3){
+    if (followers/posts <= 0.3){
         const offset = 32
         data.push({name: '1', kms: 0})
         const limit = Math.floor(Math.random()*4)
@@ -26,7 +26,7 @@ export function createData(followers: number, posts: number): {name: string, kms
         const multiplier = 2
         data.push({name: '1', kms: MAX_KMS})
         for (let i = 1; i < TOTAL_YEARS-1; i++){
-            data.push({name: (i + 1).toString(), kms: (Math.random()*30 - i * multiplier)})
+            data.push({name: (i + 1).toString(), kms: (Math.random()*90 - i * multiplier)})
         }
     }
     return data
