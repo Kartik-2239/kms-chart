@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { InputBox } from "./components/InputBox";
 import { MyLineChart } from "./components/Chart";
+import { Analytics } from "@vercel/analytics/react"
 
 function App() {
   const [isHome, setIsHome] = useState<boolean>(true);
@@ -20,6 +21,7 @@ function App() {
           </div>
           
         </div>
+        <Analytics />
       </div>
     )
   }
